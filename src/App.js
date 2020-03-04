@@ -1,8 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+
+import * as jsPDF from 'jspdf'
 
 function App() {
+  var doc = new jsPDF()
+
+  doc.text('Hello world!', 10, 10)
+  doc.save('a4.pdf')
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +27,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
